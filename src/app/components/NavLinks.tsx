@@ -1,7 +1,13 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-const NavLink = ({ href, title }) => {
+import { useState, FC } from "react";
+
+interface NavLinkProps {
+  href: string;
+  title: string;
+}
+
+const NavLink: FC<NavLinkProps> = ({ href, title }) => {
   const [navbarOpen, setNavbarOpen] = useState(true);
 
   return (
